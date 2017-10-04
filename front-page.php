@@ -16,6 +16,11 @@
     <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/font-awesome/css/font-awesome.min.css">
     <?php wp_head(); ?>
+    <style>
+        .showcase {
+            background: url(<?php echo get_theme_mod('showcase_image', get_bloginfo('template_url'). '/img/showcase.jpg'); ?>) no-repeat center center;
+        }
+    </style>
   </head>
   <body>
     <div class="blog-masthead">
@@ -39,9 +44,9 @@
     </div>
 	<section class = "showcase">
     	<div class="container">
-    		<h1>Custom Bootstrap Wordpress Theme</h1>
-    		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis erat justo, vel placerat nunc commodo nec.</p>
-    		<a class = "btn btn-primary btn-lg">Read More</a>
+    		<h1><?php echo get_theme_mod('showcase_heading', 'Custom Bootstrap Wordpress Theme'); ?></h1>
+    		<p><?php echo get_theme_mod('showcase_text', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis erat justo, vel placerat nunc commodo nec.'); ?></p>
+    		<a href = "<?php echo get_theme_mod('btn_url', 'http://test.com'); ?>" class = "btn btn-primary btn-lg"><?php echo get_theme_mod('btn_text', 'Get Started'); ?></a>
     	</div>
     </section>
     <section class="boxes">
